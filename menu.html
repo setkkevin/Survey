@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        #menu-bar {
+            background-color: #09a38a;
+            overflow: hidden;
+            text-align: center; /* Center-align the menu items */
+        }
+        #menu-bar a {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        #menu-bar a:hover {
+            background-color: #ddd;
+            color: rgb(239, 226, 49);
+        }
+        #menu-bar .left {
+            float: left; /* Align left */
+        }
+        #menu-bar .right {
+            float: right; /* Align right */
+        }
+        /* Style for the footer */
+        #footer {
+            background-color: #09a38a;
+            color: white;
+            text-align: center;
+            padding:1px 0; /* Increase top and bottom padding */
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            line-height: 1.5; /* Adjust line height for vertical alignment */
+        }
+        /* Set text color for the footer explicitly */
+        #footer a {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="menu-bar">
+        <a href="#" class="left">Home</a>
+        <a href="#" class="left">Surveys</a>
+        <a href="createQuestion.php" class="left">Create Question</a>
+        <a href="../questionsAndChoices.php" class="left">Questions And Choices</a>
+        <a href="getJSON.php" class="left">Get JSON</a>
+        <a href="surveyjs/index.php"class="left">Questionaire</a>
+      
+        <a href="#" class="right">Logout</a>
+    </div>
+
+    <div id="footer">
+        &copy; 2023 Survey Website
+    </div>
+</body>
+</html>
