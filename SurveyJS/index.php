@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <?php
-include '../menu.html';
+include 'menu.html';
 ?>
   <head>
     

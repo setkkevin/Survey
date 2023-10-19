@@ -67,10 +67,21 @@
       <td>Description:</td>
       <td><input type="text" name="description" required="required" class="form-control"><br></td>
     </tr>
+
+   
     <tr>
       <td>Group:</td>
-      <td><input type="text" name="groupe" required="required" class="form-control"><br></td>
+      <td>
+        <select name="groupe" required="required" class="form-control" onchange="toggleInputVisibility()">
+          <option value="CFE">CEO</option>
+          <option value="CFO">CFO</option>
+          <option value="CISO">CISO</option>
+          <option value="IT">IT</option>
+       </select>
+      </td>
     </tr>
+
+
     <tr>
       <td>Category:</td>
       <td><input type="text" name="category" required="required" class="form-control"><br></td>

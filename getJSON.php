@@ -1,8 +1,8 @@
-
 <?php
 
 include 'connect.php';
-
+include 'menu.html';
+//$group=$_GET['group'];
 function splitStringToArray($inputString) {
     $stringArray = explode(',', $inputString);
     $stringArray = array_map('trim', $stringArray);
@@ -22,7 +22,7 @@ function isStringNotEmpty($inputString) {
 
 
 
-$querry = "SELECT question.row_counter, question.name, question.title, question.type, choice.question_name, choice.choice_name ,question.visible_if, question.is_required , question.show_other" . " FROM question, choice " . " WHERE choice.question_name = question.name ";
+$querry = "SELECT question.row_counter, question.name, question.title, question.type, choice.question_name, choice.choice_name ,question.visible_if, question.is_required , question.show_other" . " FROM question, choice " . " WHERE choice.question_name = question.name   ";
 
 $result = $conn->query($querry);
 

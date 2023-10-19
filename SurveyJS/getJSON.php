@@ -3,6 +3,7 @@
 
 include '../connect.php';
 
+
 function splitStringToArray($inputString) {
     $stringArray = explode(',', $inputString);
     $stringArray = array_map('trim', $stringArray);
@@ -20,15 +21,15 @@ function isStringNotEmpty($inputString) {
     }
 }
 
-
-
-$querry = "SELECT question.row_counter, question.name, question.title, question.type, choice.question_name, choice.choice_name ,question.visible_if, question.is_required , question.show_other" . " FROM question, choice " . " WHERE choice.question_name = question.name ";
+//$group=$_GET['group'];
+$group= "CISO";
+$querry = "SELECT question.row_counter, question.name, question.title, question.type, choice.question_name, choice.choice_name ,question.visible_if, question.is_required , question.show_other" . " FROM question, choice " . " WHERE choice.question_name = question.name and question.groupe='$group'";
 
 $result = $conn->query($querry);
 
 if ($result) {
     $surveyData = array(
-        "title" => "(CFO)",
+        "title" => $group,
         "description" => "Description",
         "logoPosition" => "right",
         "pages" => array()
